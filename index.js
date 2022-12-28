@@ -83,11 +83,13 @@ function generatePassword(){
 btn.addEventListener("click", renderPassword)
 
 function copyToClipboard(x){
+    if (passOne.textContent !== "" && passTwo.textContent !== ""){
     navigator.clipboard.writeText(x);
     copyConfirmation.classList.remove("display-off");
     copyConfirmation.classList.add("display-on");
     copyConfirmation.textContent = "Password Saved"
     setTimeout(classReset, 1500)
+    }
 }
 function copyTextPwdOne(){
     const text = document.getElementById('password-one').textContent
