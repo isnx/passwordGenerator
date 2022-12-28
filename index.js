@@ -21,6 +21,7 @@ const myTimeout = setTimeout(classReset, 5000);
 let letInput = document.getElementById("let-input")
 let numInput = document.getElementById("num-input")
 let symInput = document.getElementById("sym-input")
+let lengthInput = document.getElementById("lenght-input")
 
 function classReset(){
     copyConfirmation.classList.add("display-off");
@@ -57,14 +58,25 @@ function renderPassword(){
 function generatePassword(){
     passwordOne = ""
     passwordTwo = ""
-    for (let i = 0; i < 15; i ++) {
-        passwordOne = passwordOne + characters[Math.floor(Math.random()*characters.length)]
+    if (lengthInput.valueAsNumber < 16){
+        for (let i = 0; i < lengthInput.valueAsNumber; i ++) {
+            passwordOne = passwordOne + characters[Math.floor(Math.random()*characters.length)]
+        }
+        for (let i = 0; i < lengthInput.valueAsNumber; i ++) {
+            passwordTwo = passwordTwo + characters[Math.floor(Math.random()*characters.length)]
+        }
+        passOne.textContent = passwordOne
+        passTwo.textContent = passwordTwo
+    } else {
+        for (let i = 0; i < 15; i ++) {
+            passwordOne = passwordOne + characters[Math.floor(Math.random()*characters.length)]
+        }
+        for (let i = 0; i < 15; i ++) {
+            passwordTwo = passwordTwo + characters[Math.floor(Math.random()*characters.length)]
+        }
+        passOne.textContent = passwordOne
+        passTwo.textContent = passwordTwo
     }
-    for (let i = 0; i < 15; i ++) {
-        passwordTwo = passwordTwo + characters[Math.floor(Math.random()*characters.length)]
-    }
-    passOne.textContent = passwordOne
-    passTwo.textContent = passwordTwo
 }
 
 

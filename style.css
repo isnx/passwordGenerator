@@ -54,7 +54,7 @@ h1{
     width: 446px;
     height: 0px;
     border: 1px solid #2F3E53;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 52px;
 }
 
@@ -117,4 +117,76 @@ h1{
     font-size: 16px;
     line-height: 24px;
     color: #D5D4D8;
+  }
+  #lenght-input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: #273549;
+    text-align: center;
+    font-family: 'Inter';
+    color:  #55F991;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .check-inputs{
+    accent-color: #55F991;
+  }
+
+  #check-inputs{
+    display: inline-flex;
+  }
+
+  @media only screen and (max-width: 450px){
+    #main{
+        width: 103%;
+        height: 100vmax;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        width: 80%;
+        height: 40px;
+        margin-left: 30px;
+        font-size: 32px;
+    }
+    #supporting-text{
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 30px;
+    }
+    #generate-password{
+        margin-left: 30px;
+        background-color: #10B981;
+    }
+    #check-inputs{
+        display: block;
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+      #line{
+        width: 95%;
+        height: 0px;
+        border: 1px solid #2F3E53;
+        margin-top: 25px;
+        margin-left: 2%;
+    }
+    #passwords{
+        margin-top: 35px;
+        margin-left: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .password{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+    
+
   }
